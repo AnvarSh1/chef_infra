@@ -14,18 +14,18 @@ However, if operation does not proceed to bootstrapping, we can do it manually;
 knife bootstrap -i *****.pem [instance public dns] -N awsec2 -x ubuntu --sudo
 ```
 
-Now, let's add our cookbook and recipe to node run list:
+Now, let's add our cookbook and recipe to the node run list:
 ```
 knife node run_list set awsec2 'recipe[main1::default]'
 ```
 
-Next, as we have just a single node, we can log in to instance with ssh and launch `chef-client`:
+Next, as we have just a single node, we can log in to the instance with ssh and launch `chef-client`:
 ```
 ssh -i *****.pem ubuntu@[instance public dns]
 sudo chef-client
 ```
 
-However, if we have more than one node, the best way will be to use `knife ssh` fucntion, for example:
+However, if we have more than one node, the best way will be to use `knife ssh` function, for example:
 
 ```
 knife ssh 'name:*' 'sudo chef-client'
