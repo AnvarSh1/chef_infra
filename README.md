@@ -1,4 +1,4 @@
-# AWS EC2 Instance launch using Chef and AWS APIS
+# AWS EC2 Instance launch using Chef and AWS APIs
 
 Below script laucnhes and bootstraps an Amazon EC2 instance using Chef Server:
 
